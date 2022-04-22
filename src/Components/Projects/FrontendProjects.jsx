@@ -152,6 +152,9 @@ export default function FrontendProjects() {
               <AccordionDetails>
                 <Button
                   variant="contained"
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
                   sx={{
                     m: 2,
                   }}

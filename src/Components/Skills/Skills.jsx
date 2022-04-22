@@ -39,14 +39,14 @@ export default function Skills() {
         Technologies I am skilled at
       </Typography>
       <Grid container spacing={2}>
-        <Grid item xs={6}>
+        <Grid item m={6} sx={{ textAlign: "center" }}>
           <Card sx={{ minWidth: 275, p: 2 }}>
             <CardContent>
               <Typography variant="h5" component="div">
                 Frontend Technologies
               </Typography>
-              <div sx={{ mb: 1.5 }} color="text.secondary">
-                <ul
+              <div color="text.secondary">
+                <div
                   style={{
                     display: "grid",
                     gridTemplateColumns: "repeat(2, 1fr)",
@@ -54,21 +54,25 @@ export default function Skills() {
                   }}
                 >
                   {frontend.map((front, idx) => {
-                    return <li key={idx}>{front}</li>;
+                    return (
+                      <p style={{ marginBottom: "10px" }} key={idx}>
+                        {front}
+                      </p>
+                    );
                   })}
-                </ul>
+                </div>
               </div>
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item sm={6}>
           <Card sx={{ minWidth: 275, p: 2 }}>
             <CardContent>
               <Typography variant="h5" component="div">
                 User Interface Design Technology
               </Typography>
               <div sx={{ mb: 1.5 }}>
-                <ul
+                <div
                   style={{
                     display: "grid",
                     gridTemplateColumns: "repeat(2, 1fr)",
@@ -77,17 +81,17 @@ export default function Skills() {
                 >
                   {uis.map((ui, idx) => {
                     return (
-                      <li
-                        sx={{
-                          color: "text.secondary",
+                      <p
+                        style={{
+                          marginBottom: "10px",
                         }}
                         key={idx}
                       >
                         {ui}
-                      </li>
+                      </p>
                     );
                   })}
-                </ul>
+                </div>
               </div>
             </CardContent>
           </Card>

@@ -53,75 +53,6 @@ export default function FrontendProjects() {
     setExpanded(newExpanded ? panel : false);
   };
 
-  const frontendProjects = [
-    {
-      id: 1,
-      name: "Zillflix-A-movie-app",
-      tech: [
-        "React Js",
-        "Tailwind CSS",
-        "Context API",
-        "Custom Hook",
-        "Daisy UI",
-        "React-Icons",
-      ],
-      features: [
-        "See the trending movie, latest movie and tv series.",
-        "ser will be able to see the details of the movie/ TV Series when he clicks on the movie.",
-        "User can search the movie name.",
-        "User will be able to bookmark the movie.",
-      ],
-      github: "https://github.com/zillur-rgb/zillflix-A-movie-app",
-      live: "https://delicate-stardust-b57c15.netlify.app/",
-    },
-    {
-      id: 2,
-      name: "Note-App using Typescript",
-      tech: ["React Js", "TypScript", "Bootstrap 5"],
-      features: [
-        "see all the notes that has been added",
-        "Add note with custom background color.",
-        "User can search the movie name.",
-        "delete note which he does not need . create note with custom color",
-      ],
-      github: "https://github.com/zillur-rgb/notes-app-react-typescript",
-      live: "https://silly-kulfi-eba079.netlify.app/",
-    },
-    {
-      id: 3,
-      name: "Recipe-App using React Js and Styled Components",
-      tech: [
-        "React Js",
-        "Styled Components",
-        "React-icons",
-        "React-Router-DOM",
-        "Splide",
-        "Local Storage",
-      ],
-      features: [
-        "see different kinds of recipes.",
-        "Can search for their desired recipe with keyword.",
-        "Can see single recipe details.",
-        "User will be able to see the ingredients of the recipes and the instructions.",
-        "Vegeterian are also able to see different vegetarian recipes.",
-      ],
-      github: "https://github.com/zillur-rgb/Recipe-App",
-      live: "https://storied-starlight-7f24e7.netlify.app/",
-    },
-    {
-      id: 4,
-      name: "Rock Paper Scissor",
-      tech: ["JavaScript", "Plain CSS"],
-      features: [
-        "Simple Rock Paper Scissor with Vanilla JavaScript",
-        "One of my oldest projects.",
-        "Can restart the game once it's over.",
-      ],
-      github: "https://github.com/zillur-rgb/rock-paper-scissor",
-      live: "https://zillur-rgb.github.io/rock-paper-scissor/",
-    },
-  ];
-
   const uiProjects = [
     {
       id: 1,
@@ -132,6 +63,11 @@ export default function FrontendProjects() {
       id: 2,
       name: "Business Consultancy Website Layout",
       link: "https://dribbble.com/shots/16674659-Business-Consultancy-Website-Layout",
+    },
+    {
+      id: 3,
+      name: "Flexytrips - A Tour Agency Website",
+      link: "https://dribbble.com/shots/18084756-Flexytrips-A-Layout-for-Tour-Agency",
     },
   ];
 
@@ -144,9 +80,9 @@ export default function FrontendProjects() {
           color={teal[600]}
           component="div"
         >
-          Recent Frontend Project
+          Recent User Interface Project
         </Typography>
-        {frontendProjects.map((project) => {
+        {uiProjects.map((project) => {
           return (
             <Accordion
               key={project.id}
@@ -165,59 +101,15 @@ export default function FrontendProjects() {
               <AccordionDetails>
                 <Button
                   variant="contained"
-                  sx={{
-                    m: 2,
-                  }}
-                >
-                  Github
-                </Button>
-                <Button
-                  variant="contained"
-                  href={project.live}
+                  href={project.link}
                   target="_blank"
                   rel="noreferrer"
                   sx={{
                     m: 2,
                   }}
                 >
-                  Live Site
+                  Dribbble Link
                 </Button>
-                <Typography
-                  sx={{
-                    typography: "subtitle2",
-                    fontWeight: "medium",
-                    mb: 0.5,
-                  }}
-                  color={teal[600]}
-                  component="div"
-                >
-                  Technology Used
-                </Typography>
-                <Box sx={{ typography: "subtitle2", my: 0.5, p: 2 }}>
-                  <ul>
-                    {project.tech.map((t, idx) => {
-                      return <li key={idx}>{t}</li>;
-                    })}
-                  </ul>
-                </Box>
-                <Typography
-                  sx={{
-                    typography: "subtitle2",
-                    fontWeight: "medium",
-                    mb: 0.5,
-                  }}
-                  color={teal[600]}
-                  component="div"
-                >
-                  Features
-                </Typography>
-                <Box sx={{ typography: "text1", my: 1.5, p: 2 }}>
-                  <ul>
-                    {project.features.map((t, idx) => {
-                      return <li key={idx}>{t}</li>;
-                    })}
-                  </ul>
-                </Box>
               </AccordionDetails>
             </Accordion>
           );

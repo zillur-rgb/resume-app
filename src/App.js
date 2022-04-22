@@ -3,11 +3,7 @@ import AllPages from "../src/Pages/AllPages";
 import Navbar from "./Components/Navbar/Navbar";
 function App() {
   return (
-    <div
-      style={{
-        backgroundColor: "#fff",
-      }}
-    >
+    <div>
       <Navbar />
       <AllPages />
     </div>
