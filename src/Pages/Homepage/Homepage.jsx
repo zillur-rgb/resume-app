@@ -1,6 +1,8 @@
 import { Container, Grid } from "@mui/material";
 import React from "react";
+import About from "../../Components/About/About";
 import ProfileCard from "../../Components/ProfileCard/ProfileCard";
+import Skills from "../../Components/Skills/Skills";
 
 const Homepage = () => {
   return (
@@ -9,10 +11,10 @@ const Homepage = () => {
         <Grid item xs={3}>
           <ProfileCard />
         </Grid>
-        <Grid item xs={9}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
-          aliquam excepturi repudiandae nihil doloremque dolor ipsum ullam et.
-          Esse, incidunt!
+        <Grid item xs={1}></Grid>
+        <Grid item xs={8}>
+          <About />
+          <Skills />
         </Grid>
       </Grid>
     </Container>
