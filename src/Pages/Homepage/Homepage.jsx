@@ -2,6 +2,8 @@ import { Container, Grid } from "@mui/material";
 import React from "react";
 import About from "../../Components/About/About";
 import ProfileCard from "../../Components/ProfileCard/ProfileCard";
+import FrontendProjects from "../../Components/Projects/FrontendProjects";
+import UIProjects from "../../Components/Projects/UIProjects";
 import Skills from "../../Components/Skills/Skills";
 
 const Homepage = () => {
@@ -15,6 +17,8 @@ const Homepage = () => {
         <Grid item xs={8}>
           <About />
           <Skills />
+          <FrontendProjects />
+          <UIProjects />
         </Grid>
       </Grid>
     </Container>

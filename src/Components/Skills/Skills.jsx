@@ -1,8 +1,6 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Grid } from "@mui/material";
 import { teal } from "@mui/material/colors";
@@ -47,7 +45,7 @@ export default function Skills() {
               <Typography variant="h5" component="div">
                 Frontend Technologies
               </Typography>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+              <div sx={{ mb: 1.5 }} color="text.secondary">
                 <ul
                   style={{
                     display: "grid",
@@ -59,7 +57,7 @@ export default function Skills() {
                     return <li key={idx}>{front}</li>;
                   })}
                 </ul>
-              </Typography>
+              </div>
             </CardContent>
           </Card>
         </Grid>
@@ -69,7 +67,7 @@ export default function Skills() {
               <Typography variant="h5" component="div">
                 User Interface Design Technology
               </Typography>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+              <div sx={{ mb: 1.5 }}>
                 <ul
                   style={{
                     display: "grid",
@@ -78,10 +76,19 @@ export default function Skills() {
                   }}
                 >
                   {uis.map((ui, idx) => {
-                    return <li key={idx}>{ui}</li>;
+                    return (
+                      <li
+                        sx={{
+                          color: "text.secondary",
+                        }}
+                        key={idx}
+                      >
+                        {ui}
+                      </li>
+                    );
                   })}
                 </ul>
-              </Typography>
+              </div>
             </CardContent>
           </Card>
         </Grid>
