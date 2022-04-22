@@ -39,7 +39,7 @@ export default function Skills() {
         Technologies I am skilled at
       </Typography>
       <Grid container spacing={2}>
-        <Grid item m={6} sx={{ textAlign: "center" }}>
+        <Grid item sm={6} sx={{ textAlign: "center" }}>
           <Card sx={{ minWidth: 275, p: 2 }}>
             <CardContent>
               <Typography variant="h5" component="div">
